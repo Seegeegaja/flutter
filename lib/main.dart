@@ -2,7 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_study/animalSounds.dart';
 import 'package:flutter_study/buttonTest.dart';
 import './layout/myAppBar.dart';
+import 'appBarMenu.dart';
 import 'characterCard.dart';
+import 'loginPage.dart';
+
 
 void main(){
   runApp(MyApp());
@@ -48,6 +51,16 @@ class Home extends StatelessWidget {
               _TextMenu(
                 titleText: '3. Animal Sound Page',
                 openWidget: AnimalSounds(),
+              ),
+              SizedBox(height: 10,),
+              _TextMenu(
+                titleText: '4. AppBarMenu',
+                openWidget: AppBarMenu(),
+              ),
+              SizedBox(height: 10,),
+              _TextMenu(
+                titleText: '5. Dice Programming',
+                openWidget: LoginPage(),
               ),
             ],
           ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
 
 class AnimalSounds extends StatelessWidget {
   const AnimalSounds({super.key});
@@ -9,8 +10,8 @@ class AnimalSounds extends StatelessWidget {
       backgroundColor: Colors.black,
       appBar: AppBar(
         backgroundColor: Colors.amber,
-        foregroundColor: Colors.white,
-        title: Text('Animal Sound', 
+        leading: SizedBox( height: 50, width: 50, child: Lottie.asset('lottie/cat.json'),),
+        title: Text('Animal Sound',
           style: TextStyle(
             color: Colors.white,
             fontSize: 40,
@@ -21,155 +22,143 @@ class AnimalSounds extends StatelessWidget {
         centerTitle: true,
       ),
       body:
-        Padding(
-            padding: EdgeInsets.fromLTRB(30, 40, 0, 0),
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.center,
+      Padding(
+        padding: const EdgeInsets.only(top:10),
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                    Center(
-                      child: Image.asset(
-                          'image/animal/bear.png',
-                        width: 100,
-                        height: 150,
+                  Column(
+                    children: [
+                      Image.asset('image/animal/bear.png', height: 100,),
+                      Padding(
+                        padding: EdgeInsets.only(top: 10, bottom : 10),
+                        child: Container(
+                          width: 115,
+                          height: 2,
+                          color: Colors.white,
+                        ),
                       ),
-                    ),
-                    Divider(
-                      height: 10,
-                      color: Colors.white,
-                      thickness: 1,
-                      endIndent: 30,
-                    ),
-                    Text('Bear',
-                      style: TextStyle(
-                        color: Colors.white,
-                        letterSpacing: 2,
-                        fontSize: 30,
-                      ),
-                    ),
-                  SizedBox(height: 20,),
-                  Center(
-                    child: Image.asset(
-                      'image/animal/camel.png',
-                      width: 100,
-                      height: 150,
-                    ),
-                  ),
-                  Divider(
-                    height: 10,
-                    color: Colors.white,
-                    thickness: 1,
-                    endIndent: 30,
-                  ),
-                  Text('Camel',
-                    style: TextStyle(
-                      color: Colors.white,
-                      letterSpacing: 2,
-                      fontSize: 30,
-                    ),
-                  ),
-                  SizedBox(height: 20,),
-                  Center(
-                    child: Image.asset(
-                      'image/animal/fox.png',
-                      width: 100,
-                      height: 150,
-                    ),
-                  ),
-                  Divider(
-                    height: 10,
-                    color: Colors.white,
-                    thickness: 1,
-                    endIndent: 30,
-                  ),
-                  Text('Fox',
-                    style: TextStyle(
-                      color: Colors.white,
-                      letterSpacing: 2,
-                      fontSize: 30,
-                    ),
-                  ),
-                  SizedBox(height: 20,),
+                      Text('Bear',
+                        style: TextStyle(fontSize: 20 , color: Colors.white),
+                      )
 
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      Image.asset('image/animal/camel.png', height: 100,),
+                      Padding(
+                        padding: EdgeInsets.only(top: 10, bottom : 10),
+                        child: Container(
+                          width: 115,
+                          height: 2,
+                          color: Colors.white,
+                        ),
+                      ),
+                      Text('Camel',
+                        style: TextStyle(fontSize: 20 , color: Colors.white),
+                      )
+
+                    ],
+                  )
                 ],
-
               ),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  Center(
-                    child: Image.asset(
-                      'image/animal/koala.png',
-                      width: 100,
-                      height: 150,
-                    ),
-                  ),
-                  Divider(
-                    height: 10,
-                    color: Colors.white,
-                    thickness: 1,
-                    endIndent: 30,
-                  ),
-                  Text('Koala',
-                    style: TextStyle(
-                      color: Colors.white,
-                      letterSpacing: 2,
-                      fontSize: 30,
-                    ),
-                  ),
-                  SizedBox(height: 20,),
-                  Center(
-                    child: Image.asset(
-                      'image/animal/lion.png',
-                      width: 100,
-                      height: 150,
-                    ),
-                  ),
-                  Divider(
-                    height: 10,
-                    color: Colors.white,
-                    thickness: 1,
-                    endIndent: 30,
-                  ),
-                  Text('Lion',
-                    style: TextStyle(
-                      color: Colors.white,
-                      letterSpacing: 2,
-                      fontSize: 30,
-                    ),
-                  ),
-                  SizedBox(height: 20,),
-                  Center(
-                    child: Image.asset(
-                      'image/animal/tiger.png',
-                      width: 100,
-                      height: 150,
-                    ),
-                  ),
-                  Divider(
-                    height: 10,
-                    color: Colors.white,
-                    thickness: 1,
-                    endIndent: 30,
-                  ),
-                  Text('Tiger',
-                    style: TextStyle(
-                      color: Colors.white,
-                      letterSpacing: 2,
-                      fontSize: 30,
-                    ),
-                  ),
-                  SizedBox(height: 20,),
+                  Column(
+                    children: [
+                      Image.asset('image/animal/fox.png', height: 100,),
+                      Padding(
+                        padding: EdgeInsets.only(top: 10, bottom : 10),
+                        child: Container(
+                          width: 115,
+                          height: 2,
+                          color: Colors.white,
+                        ),
+                      ),
+                      Text('Fox',
+                        style: TextStyle(fontSize: 20 , color: Colors.white),
+                      )
 
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      Image.asset('image/animal/koala.png', height: 100,),
+                      Padding(
+                        padding: EdgeInsets.only(top: 10, bottom : 10),
+                        child: Container(
+                          width: 115,
+                          height: 2,
+                          color: Colors.white,
+                        ),
+                      ),
+                      Text('Koala',
+                        style: TextStyle(fontSize: 20 , color: Colors.white),
+                      )
+
+                    ],
+                  )
                 ],
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Column(
+                    children: [
+                      Image.asset('image/animal/lion.png', height: 100,),
+                      Padding(
+                        padding: EdgeInsets.only(top: 10, bottom : 10),
+                        child: Container(
+                          width: 115,
+                          height: 2,
+                          color: Colors.white,
+                        ),
+                      ),
+                      Text('Lion',
+                        style: TextStyle(fontSize: 20 , color: Colors.white),
+                      )
 
-              )
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      Image.asset('image/animal/tiger.png', height: 100,),
+                      Padding(
+                        padding: EdgeInsets.only(top: 10, bottom : 10),
+                        child: Container(
+                          width: 115,
+                          height: 2,
+                          color: Colors.white,
+                        ),
+                      ),
+                      Text('Tiger',
+                        style: TextStyle(fontSize: 20 , color: Colors.white),
+                      )
+
+                    ],
+                  )
+                ],
+              ),
             ],
           ),
         ),
-      
+      ),
+      floatingActionButton:
+      FloatingActionButton(
+          onPressed: (){
+        Navigator.pop(context);
+      },
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.all(Radius.circular(50))
+      ),
+        child: Icon(Icons.arrow_back),
+      ),
     );
   }
 }

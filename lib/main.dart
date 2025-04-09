@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_study/animalSounds.dart';
 import 'package:flutter_study/buttonTest.dart';
+import 'package:flutter_study/weatherApp.dart';
 import './layout/myAppBar.dart';
 import 'appBarMenu.dart';
 import 'characterCard.dart';
@@ -61,6 +62,11 @@ class Home extends StatelessWidget {
               _TextMenu(
                 titleText: '5. Dice Programming',
                 openWidget: LoginPage(),
+              ),
+              SizedBox(height: 10,),
+              _TextMenu(
+                titleText: '6. Weather App',
+                openWidget: WeatherApp(),
               ),
             ],
           ),
